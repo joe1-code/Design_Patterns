@@ -69,5 +69,44 @@
 -An object represents another object
 
 
+*BEHAVIORAL DESIGN PATTERNS
+-These designs patterns are all about class's objects communication 
+-it deals with how objects communicates of a class
+
+>chain of responsibilities
+-Is a way of passing a request between a chain of objects
+
+>command
+-encapsulates a command request as an object
+
+>Interpreter
+-Is a way to include langauge element into a program
+
+>Iterator
+-sequentially access the elements of a list/collection
+
+>Mediator
+-defines simplified communication between a classes
+
+>Memento
+-captures and restore an object's internal state
+
+>Null object
+-Is design to act as a default value of an object
+
+>Observer
+-Is a way of notfying a change to a number of classes
+
+>state
+-it alters object's behavior when its state changes
+
+>strategy
+-encapsulates an algorithm inside a class
+
+>Template method
+-defer the exact algorithms of a class to a subclass
+
+>Visitor
+-defines a new operation of in a class without any changes
 
 
