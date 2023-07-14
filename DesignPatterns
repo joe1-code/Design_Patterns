@@ -1,1 +1,73 @@
 #notes for design patterns
+
+*Design patterns
+-Is a general repeatable solutions to some commonly occuring problems during software design process.
+-It's not a finished design that can be employed to development process
+-It's rather a template or description that can continously be used to solve problems associated with      designs and it can be used in many different situations.
+
+
+*USES OF DESIGN PATTERNS
+-It can speed up the development process by employing the tested,proven development paradigms
+-It can help in effective development by considering issues that may not arrise earlier until later on in implementations.
+-It improves readability to the coders and archtects that are familiar with the patterns
+-It provides general solutions to the problems associated with designs rather than having one issue at a time
+-patterns allows developers to communicate using well-known and well understood names for software interaction 
+-They can be improved over time making them more robust than ad-hoc designs
+
+
+*CREATIONAL DESIGN PATTERNS
+-These design patterns uses class instantations.
+-They are of two types
+*class-creation patterns
+-it uses class inheritance effectively in instantation process
+*object-creational patterns
+-it uses delegation effectively to get job done
+
+>Abstract Factory
+-it creates an instance of several families of classes
+
+>builder
+-it separates object construction from it's presentation 
+
+>Factory method
+-creates an instance of several derived classes
+
+>Object Pool
+-Avoid expensive acquistions and release of resources by recycling objects that are not in use.
+
+>Prototype
+-A fully initialized instance to be copied or cloned
+
+>singleton
+-Is a class of which only a single instance can exist
+
+*STRUCTURAL DESING PATTERNS
+-This pattern is all about class and object composition.Structural class-creation uses class inheritance to compose interfaces while structural object-creation patterns defines new ways to compose objects to obtain new functionalities.
+
+>adapter
+-Matches instances of different classes
+
+>Bridge
+-It separates object interfaces from its implementation
+
+>Composite
+-Is a tree structure of simple composite objects
+
+>Decorator
+-Adds responsibilities to the object dynamically
+
+>Facade
+-A single class that represents a whole subsystems 
+
+>Flyweight
+-A fine grained instance used for efficient sharing
+
+>Private class/Data
+-prevents/Restricts accessor/mutator
+
+>Proxy
+-An object represents another object
+
+
+
+
