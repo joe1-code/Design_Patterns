@@ -131,3 +131,112 @@
 >Couplers
 - All the smells in this grp contribute to excessive coupling between classes.
 
+* REFACTORING TECHNIQUES
+
+> Composing methods
+- In most cases the long methods are the roots of all evils.
+- The vagaries of this codes inside these methods conceal execution and makes it difficult to understand and change.
+- This refactoring techniques removes the code duplication which provides room for improvements.
+
+> Moving features between objects
+- This refactoring techniques shows how to safely move functionalities between classes,create new classes and how to hide implementation details from the public access.
+
+> Organizing Data
+- This techniques helps with data handling,replacing primitives with rich class functionalities and untangling of class associations which makes classes more portable and reusable
+
+>Simplifying Conditional expressions
+- conditionals gets more and more complicated in their logic and yet there are techniques to combat this example replace conditionals with polymorphism, introduce null objects
+
+> Simplifying method calls
+- This techniques makes the method calls easier to understand and in turn it simplifies the interfaces for interaction between classes.
+
+
+*--------------------------------REFACTORING GURU ----------------------------------------------
+- This is an online platform that contains materials concerning design patterns and refactoring that plays useful to developers who incoporates the knowledge to their projects for better performance,maintainability and scaling.
+
+* CLEAN CODES
+- The main intention of refactoring is to fight technical debt. It transforms a messy into clean code and simple designs.
+
+* Features of clean code
+
+i/ clean code does not contain bloaters,duplicated methods,poor variable naming
+ii/ clean codes contains minimal number of classes and other moving parts
+iii/ clean code passes all the tests
+iv/ clean code is easier and cheaper to maintain
+
+* Technical debt
+- an act of continously developing a software without implementing tests, refactoring which in turn it slows down the development process.
+
+* causes of technical debt
+i/ Business pressure
+
+ii/ Lack of understanding of the consequences of the technical debt
+
+iii/ Failure to combat the cherence of components
+- This is when the project resembles the monolith than the product of individual modules.
+-In this case, changes to one module will affect the other modules.Team development is made more difficult because it's difficult to isolate the work individual members.
+
+iv/ Lack of tests
+
+v/ Lack of documentation
+- This will slow down the process as new people will have to be introduce to the project. And it's a disaster if key people leave the project
+
+vi/ Lack of interaction between team members
+
+vii/ Long term simultenous development in different branches
+- This happens when the changes are not merged regulary which leads to accumulation of technical debts.
+
+viii/ Delayed refactoring
+ix/ Lack of compliance
+x/ Incompetence
+
+* HOW TO REFACTOR
+- Refactoring process should be done as a series of small changes.
+
+>checklist of refactoring
+-The code should be cleaner
+-new function should not be created during refactoring
+-All existing tests must pass after refactoring
+
+* NOTE:
+How to solve the problem of long method in bloaters is by using extract method
+PROBLEM
+
+def printOwing(self):
+ self.printBanner()
+
+ #print details
+ print('name:',self.name)
+ print('amount:',self.getoutstanding)
+
+SOLUTION
+
+def printOwing(self):
+ self.printBanner()
+ self.printDetails(self.getoutstanding())
+
+def printDetails(self, getoutstanding):
+ print("name:",self.name)
+ print("amount:", getoutstanding)
+
+
+* REPLACE TEMP WITH QUERY
+def CalculateTotal():
+ baseprice = quantity * itemprice
+ if baseprice > 1000:
+  return baseprice * 0.95
+ else:
+  return baseprice * 0.98
+
+
+SOLUTION
+
+def CalculateTotal():
+ if baseprice() > 1000:
+  return baseprice * 0.95
+ else:
+  return baseprice * 0.98
+
+def baseprice():
+ return   quantity * itemprice
+   
