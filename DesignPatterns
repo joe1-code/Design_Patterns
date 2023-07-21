@@ -240,3 +240,12 @@ def CalculateTotal():
 def baseprice():
  return   quantity * itemprice
    
+
+METHODS FOR REFACTORING
+- Extract method
+- Replace temp with query
+- Extract variable
+- Inline method
+- Inline temp
+- Split temporary variable
+- Substute algorithms
